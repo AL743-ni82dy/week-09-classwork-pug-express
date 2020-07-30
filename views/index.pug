@@ -1,0 +1,9 @@
+html
+  include partials/head.pug
+
+  body
+    h1 Movies
+    for movie in movieTimes
+      h2
+        a(href=`/showtimes/${movie.id}`)= movie.title
+      div= movie.synopsis
